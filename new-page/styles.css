@@ -2732,7 +2732,7 @@ body,
 }
 
 .blog-area .info .meta li {
-  color: #999999;
+  /* color: #999999; */
   display: inline-block;
   font-family: "Poppins",sans-serif;
   font-weight: 400;
@@ -2740,7 +2740,7 @@ body,
 }
 
 .blog-area .info .meta li a {
-  color: #999999;
+  /* color: #999999; */
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -3812,7 +3812,7 @@ blockquote {
 =================================================================== */
 
 footer .f-item p {
-  color: #999999;
+  /* color: #999999; */
 }
 
 footer .f-item > h3,
@@ -3893,7 +3893,7 @@ footer .f-item .address li i {
 }
 
 footer .f-item .address li span {
-  color: #999999;
+  /* color: #999999; */
 }
 
 footer .f-item .address li {
@@ -3914,7 +3914,7 @@ footer .f-item.link li {
 }
 
 footer .f-item.link li a {
-  color: #999999;
+  /* color: #999999; */
   display: inline-block;
   font-weight: 400;
   margin-bottom: 10px;
