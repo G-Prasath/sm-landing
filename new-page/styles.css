@@ -1620,6 +1620,14 @@ body,
   position: absolute;
   top: 50%;
 }
+.about-grid{
+  display: flex;
+}
+@media (max-width: 576px) {
+  .about-grid{
+    flex-direction: column;
+}
+}
 
 .about-area .default.info h4 {
   color: #ff5a6e;
