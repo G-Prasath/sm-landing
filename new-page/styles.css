@@ -1155,6 +1155,12 @@ body,
   color: #323a45 !important;
   opacity: 1;
 }
+.error-message{
+  color: red;
+  font-weight: bold;
+}
+
+
 
 
 /* New Shape */
@@ -1491,6 +1497,7 @@ body,
   margin-bottom: 30px;
 }
 
+
 .we-offer-area.item-border-less .item .number {
   font-family: "Poppins",sans-serif;
   font-size: 50px;
@@ -1605,6 +1612,38 @@ body,
   top: -10px;
   width: 120px;
 }
+
+.imgs{
+    overflow: hidden;
+    background-color: aliceblue;
+    white-space: nowrap;
+}
+.img-sliders{
+    animation: 15s slides infinite linear;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img-sliders > img{
+    width: 450px;
+    height: 200px;
+    margin: 0px 5px;
+}
+
+.imgs:hover .img-sliders{
+    animation-play-state: paused;
+}
+
+@keyframes slides {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
 
 
 /* ============================================================== 
@@ -1775,7 +1814,10 @@ body,
   margin-bottom: 20px;
 }
 
-.features-area .item .info {
+
+.features-items .icon > img{
+  width: 50px;
+  height: auto;
 }
 
 .features-area .item .icon i {
