@@ -77,58 +77,93 @@
       },
     });
 
-/* ==================================================
+    /* ==================================================
         Contact Form Validations
 ================================================== */
-      
-      document
-        .getElementById("form1")
-        .addEventListener("submit", function (event) {
-          // Reset error messages
-          var errorElements = document.getElementsByClassName("error-message");
-          for (var i = 0; i < errorElements.length; i++) {
-            errorElements[i].innerText = "";
-          }
 
-          // Validate each input field
-          var name = document.querySelector(".name").value.trim();
-          var email = document.querySelector(".email").value.trim();
-          var phone = document.querySelector(".phone").value.trim();
-          var requirement = document.querySelector(".msg").value.trim();
-          var isValid = true;
+    document
+      .getElementById("form1")
+      .addEventListener("submit", function (event) {
+        // Reset error messages
+        var errorElements = document.getElementsByClassName("error-message");
+        for (var i = 0; i < errorElements.length; i++) {
+          errorElements[i].innerText = "";
+        }
 
-          if (name === "") {
-            document.getElementById("name-error").innerText =
-              "Please enter your name.";
-            isValid = false;
-          }
-          if (email === "") {
-            document.getElementById("email-error").innerText =
-              "Please enter your email.";
-            isValid = false;
-          }
-          if (phone === "") {
-            document.getElementById("phone-error").innerText =
-              "Please enter your phone number.";
-            isValid = false;
-          } else if (!/^\d{10}$/.test(phone)) {
-            document.getElementById("phone-error").innerText =
-              "Please enter a valid 10-digit phone number.";
-            isValid = false;
-          }
-          if (requirement === "") {
-            document.getElementById("requirement-error").innerText =
-              "Please enter your requirement.";
-            isValid = false;
-          }
+        // Validate each input field
+        var name = document.querySelector(".name").value.trim();
+        var email = document.querySelector(".email").value.trim();
+        var phone = document.querySelector(".phone").value.trim();
+        var isValid = true;
 
-          if (!isValid) {
-            event.preventDefault(); // Prevent form submission
-          }
-        });
-      
-      
-      
-  
+        if (name === "") {
+          document.getElementById("name-error").innerText =
+            "Please enter your name.";
+          isValid = false;
+        }
+        if (email === "") {
+          document.getElementById("email-error").innerText =
+            "Please enter your email.";
+          isValid = false;
+        }
+        if (phone === "") {
+          document.getElementById("phone-error").innerText =
+            "Please enter your phone number.";
+          isValid = false;
+        } else if (!/^\d{10}$/.test(phone)) {
+          document.getElementById("phone-error").innerText =
+            "Please enter a valid 10-digit phone number.";
+          isValid = false;
+        }
+        
+
+        if (!isValid) {
+          event.preventDefault(); // Prevent form submission
+        }
+      });
+
+
+
+
+    document
+      .getElementById("form2")
+      .addEventListener("submit", function (event) {
+        // Reset error messages
+        var errorElements = document.getElementsByClassName("alert-error");
+        for (var i = 0; i < errorElements.length; i++) {
+          errorElements[i].innerText = "";
+        }
+
+        // Validate each input field
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var phone = document.getElementById("phone").value.trim();
+        var isValid = true;
+
+        if (name === "") {
+          document.getElementById("footer-name").innerText =
+            "Please enter your name.";
+          isValid = false;
+        }
+        if (email === "") {
+          document.getElementById("footer-email").innerText =
+            "Please enter your email.";
+          isValid = false;
+        }
+        if (phone === "") {
+          document.getElementById("footer-phone").innerText =
+            "Please enter your phone number.";
+          isValid = false;
+        } else if (!/^\d{10}$/.test(phone)) {
+          document.getElementById("footer-phone").innerText =
+            "Please enter a valid 10-digit phone number.";
+          isValid = false;
+        }
+        
+
+        if (!isValid) {
+          event.preventDefault(); // Prevent form submission
+        }
+      });
   });
 })(jQuery); // End jQuery
